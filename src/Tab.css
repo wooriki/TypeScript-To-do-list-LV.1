@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Do Hyeon", sans-serif;
+}
+
+.appBody {
+    width: 1200px;
+    min-width: 800px;
+}
+.appHeader {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+.appHeader > h1 {
+    width: 95px;
+    font-size: 18px;
+}
+.appHeader > h1:first-child {
+    margin-left: 10px;
+}
+.appHeader > h1:last-child {
+    margin-right: 10px;
+    text-align: right;
+}
+.appInput {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(151, 189, 200);
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 3px 5px 12px 5px rgba(0, 0, 0, 0.144);
+}
+.titleLable,
+.detailLable {
+    margin: 0 10px 0 20px;
+}
+.appInput button {
+    margin-right: 10px;
+    background-color: rgb(41, 149, 27);
+    width: 160px;
+    letter-spacing: 1px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    box-shadow: 3px 5px 12px 5px rgba(0, 0, 0, 0.144);
+}
+.appInput button:hover {
+    background-color: rgb(21, 176, 0);
+}
+input {
+    margin: 0;
+    width: 200px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    text-indent: 1em;
+}
+
+.tabBody {
+    margin: 10px 0 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.doneBody {
+    margin: 10px 0 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.userTab {
+    margin: auto;
+    width: 250px;
+    height: 130px;
+    background-color: rgb(243, 243, 243);
+    padding: 14px 20px 14px 20px;
+    text-align: left;
+    border: 4px solid rgba(38, 154, 23, 0.338);
+    border-radius: 20px;
+    box-shadow: 3px 5px 12px 5px rgba(0, 0, 0, 0.144);
+}
+.userTab:hover {
+    width: 253px;
+    background-color: rgb(255, 255, 255);
+    border: 4px solid rgba(38, 154, 23, 0.69);
+    box-shadow: 3px 5px 10px 5px rgba(0, 0, 0, 0.244);
+}
+.tabTitle {
+    font-size: 18px;
+}
+.tabDetail {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.btns {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px;
+}
+
+.btns > button:first-child {
+    background-color: rgb(255, 122, 122);
+    color: white;
+    border: none;
+    padding: 8px 10px 10px 10px;
+    width: 95px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+.btns > button:first-child:hover {
+    background-color: rgb(244, 45, 45);
+}
+
+.btns > button:last-child {
+    background-color: rgb(37, 184, 200);
+    color: white;
+    border: none;
+    padding: 8px 10px 10px 10px;
+    width: 95px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+.btns > button:last-child:hover {
+    background-color: rgb(8, 161, 212);
+}
