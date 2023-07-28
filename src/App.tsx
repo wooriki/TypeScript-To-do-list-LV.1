@@ -49,14 +49,17 @@ const App: React.FC = () => {
             isDone: false,
         };
 
-        setTabs((prevTabs) => [...prevTabs, newTab]);
+        // setTabs((prevTabs) => [...prevTabs, newTab]);
+        // 기존 할 일 목록에 새로운 항목 추가
+        setTabs([...tabs, newTab]);
+
         setTitle("");
         setDetail("");
     };
 
     const deleBtn = (id: number) => {
-        const newTabs2 = tabs.filter((tab) => tab.id !== id);
-        setTabs(newTabs2);
+        const newTabs = tabs.filter((tab) => tab.id !== id);
+        setTabs(newTabs);
     };
 
     const toggleBtn = (id: number) => {
@@ -69,6 +72,7 @@ const App: React.FC = () => {
         }
     };
 
+    // 진행 중인 일과 완료한 일을 구분하여 필터링
     const workingOnTab = tabs.filter((tab) => !tab.isDone);
     const finallyDoneTab = tabs.filter((tab) => tab.isDone);
 
