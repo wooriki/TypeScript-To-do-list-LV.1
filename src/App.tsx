@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./Tab.css";
+import "./App.css";
 import Tabs from "./components/Tabs";
 
 interface Tab {
@@ -31,6 +31,7 @@ const App: React.FC = () => {
             isDone: false,
         },
     ]);
+
     const [title, setTitle] = useState<string>(""); // title 상태의 타입 지정
     const [detail, setDetail] = useState<string>(""); // detail 상태의 타입 지정
 
@@ -56,12 +57,12 @@ const App: React.FC = () => {
         setDetail("");
     };
 
-    const deleBtn = (id: number) => {
+    const deleteTab = (id: number) => {
         const newTabs = tabs.filter((tab) => tab.id !== id);
         setTabs(newTabs);
     };
 
-    const toggleBtn = (id: number) => {
+    const toggleTab = (id: number) => {
         const doneTab = tabs.find((tab) => tab.id === id);
 
         if (doneTab) {
@@ -101,8 +102,8 @@ const App: React.FC = () => {
                     <Tabs
                         tab={tab}
                         key={tab.id}
-                        deleBtn={deleBtn}
-                        toggleBtn={toggleBtn}
+                        deleteTab={deleteTab}
+                        toggleTab={toggleTab}
                     />
                 ))}
             </div>
@@ -112,8 +113,8 @@ const App: React.FC = () => {
                     <Tabs
                         tab={tab}
                         key={tab.id}
-                        deleBtn={deleBtn}
-                        toggleBtn={toggleBtn}
+                        deleteTab={deleteTab}
+                        toggleTab={toggleTab}
                     />
                 ))}
             </div>
