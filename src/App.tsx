@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import "./Tab.css";
 import Tabs from "./components/Tabs";
-import DefaultBtn from "./components/DefaultBtn";
 
 interface Tab {
     id: number;
