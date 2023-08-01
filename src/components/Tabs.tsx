@@ -1,33 +1,25 @@
 import React from "react";
-import DefaultBtn from "./DefaultBtn";
-
-interface Tab {
-    id: number;
-    title: string;
-    detail: string;
-    isDone: boolean;
-}
+import Tab from "./Tab";
 
 interface TabsProps {
     tab: Tab;
-    deleBtn: (id: number) => void;
-    toggleBtn: (id: number) => void;
+    deleteTab: (id: number) => void;
+    toggleTab: (id: number) => void;
 }
 
-const Tabs: React.FC<TabsProps> = ({ tab, deleBtn, toggleBtn }) => {
-    const { id, title, detail, isDone } = tab;
-
+const Tabs: React.FC<TabsProps> = ({ tab, deleteTab, toggleTab }) => {
     return (
-        <div className={`userTab ${isDone ? "complete" : ""}`}>
-            <div className="tabTitle">{title}</div>
-            <div className="tabDetail">{detail}</div>
+        <div className={`tab-item ${tab.isDone ? "done" : ""}`}>
+            <h4>{tab.title}</h4>
+            <span>{tab.detail}</span>
+
             <div className="btns">
-                <button className="redBtn" onClick={() => deleBtn(id)}>
-                    삭제
-                </button>
-                <button className="blueBtn" onClick={() => toggleBtn(id)}>
-                    {isDone ? "취소" : "완료"}
-                </button>
+                <button onClick={() => deleteTab(tab.id)}>Delete</button>
+                {tab.isDone ? (
+                    <button onClick={() => toggleTab(tab.id)}>Cancle</button>
+                ) : (
+                    <button onClick={() => toggleTab(tab.id)}>Complete</button>
+                )}
             </div>
         </div>
     );
