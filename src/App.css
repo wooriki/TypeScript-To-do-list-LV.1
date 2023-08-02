@@ -5,27 +5,41 @@
     box-sizing: border-box;
     font-family: "Do Hyeon", sans-serif;
 }
-.bodyTag {
-    width: 1200px;
+button {
+    border: none;
+}
+.appBody {
+    width: 80%;
     min-width: 800px;
     /* background-color: rgb(235, 235, 235); */
 }
-.titleTag {
+.appHeader {
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
 }
-.inputMom {
-    margin-top: 10px;
+.appHeader .title {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 18px;
+}
+.appHeader .subTitle {
+    text-align: right;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.appInput {
+    margin-top: 4px;
 }
 .inputTag {
     /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); */
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: rgb(151, 189, 200);
-    align-items: center;
     border-radius: 10px;
     font-size: 20px;
     font-weight: 600;
@@ -35,21 +49,34 @@
     height: 35px;
     border: none;
     border-radius: 10px;
+    margin-left: 0;
+}
+.titleLable {
+    width: 40px;
+    margin: 0;
+    margin-left: 10px;
+}
+.detailLable {
+    width: 40px;
+    margin: 0;
+    margin-left: 10px;
 }
 .inputTag > button {
     background-color: rgb(38, 154, 23);
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
+
     font-weight: 600;
     color: white;
+    margin-right: 0;
 }
 .inputTag > button:hover {
     background-color: rgb(16, 114, 3);
 }
-/* input > p {
-    font-size: 20px;
-} */
-.app-style {
+input {
+    padding-left: 10px;
+}
+.tabBody {
     /* width: 100%; */
     margin: 10px 0 20px 0;
     display: grid;
@@ -60,7 +87,7 @@
     width: 250px;
 } */
 
-.div-style {
+.tab-item {
     height: 130px;
     background-color: rgb(243, 243, 243);
     padding: 15px;
@@ -69,17 +96,17 @@
     border-radius: 20px;
 }
 
-.appDone-style {
+.doneBody {
     margin: 10px 0 30px 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 10px;
 }
-h1 {
+h4 {
     font-size: 18px;
 }
 
-div > p {
+div > span {
     margin-top: 10px;
     font-size: 14px;
 }
