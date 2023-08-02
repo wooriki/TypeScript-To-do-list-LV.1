@@ -14,11 +14,17 @@ const Tabs: React.FC<TabsProps> = ({ tab, deleteTab, toggleTab }) => {
             <span>{tab.detail}</span>
 
             <div className="btns">
-                <button onClick={() => deleteTab(tab.id)}>Delete</button>
+                <button className="red" onClick={() => deleteTab(tab.id)}>
+                    Delete
+                </button>
                 {tab.isDone ? (
-                    <button onClick={() => toggleTab(tab.id)}>Cancle</button>
+                    <button className="blue" onClick={() => toggleTab(tab.id)}>
+                        Cancle
+                    </button>
                 ) : (
-                    <button onClick={() => toggleTab(tab.id)}>Complete</button>
+                    <button className="blue" onClick={() => toggleTab(tab.id)}>
+                        Complete
+                    </button>
                 )}
             </div>
         </div>
