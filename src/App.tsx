@@ -79,22 +79,24 @@ const App: React.FC = () => {
     return (
         <div className="appBody">
             <header className="appHeader">
-                <h1>My ToDoList</h1>
-                <h1>React</h1>
+                <h1 className="title">My ToDoList</h1>
+                <h1 className="subTitle">TypeScript</h1>
             </header>
             <div className="appInput">
-                <label className="titleLable">제목</label>
-                <input
-                    autoFocus
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                />
-                <label className="detailLable">내용</label>
-                <input
-                    value={detail}
-                    onChange={(e) => setDetail(e.target.value)}
-                />
-                <button onClick={addHandler}>등록하기</button>
+                <div className="inputTag">
+                    <label className="titleLable">제목</label>
+                    <input
+                        autoFocus
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                    />
+                    <label className="detailLable">내용</label>
+                    <input
+                        value={detail}
+                        onChange={(e) => setDetail(e.target.value)}
+                    />
+                    <button onClick={addHandler}>등록하기</button>
+                </div>
             </div>
             <h1 style={{ padding: "10px 0 0 20px" }}>Working On 🔥</h1>
             <div className="tabBody">
